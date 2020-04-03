@@ -3,7 +3,9 @@ package com.example.bxc_logowanie;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,12 +17,26 @@ public class MainActivity extends AppCompatActivity {
     private EditText Password;
     private TextView Info;
     private Button Login;
-    private int counter = 5;
+    private int counter = 10;
+
+
+
+//    TextView txt= (TextView) findViewById(R.id.home); //txt is object of TextView
+//    txt.setMovementMethod(LinkMovementMethod.getInstance());
+//    txt.setOnClickListener(new View.OnClickListener() {
+//        public void onClick(View v) {
+//            Intent browserIntent = new Intent(Intent.ACTION_VIEW);
+//            browserIntent.setData(Uri.parse("http://www.google.com"));
+//            startActivity(browserIntent);
+//        }
+//    });
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         Name = (EditText) findViewById(R.id.etName);
         Password = (EditText) findViewById(R.id.etPassword);
@@ -33,16 +49,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 validate(Name.getText().toString(), Password.getText().toString());
-
             }
         });
     }
-
     private void validate(String userName, String userPassword){
-        if ((userName == "admin") && (userPassword == "1234")){
+
+
+        if ((userName.equals("admin")) && (userPassword.equals("1234"))){
             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
             startActivity(intent);
-            setContentView(R.layout.activity_second);
         }else {
             counter--;
 

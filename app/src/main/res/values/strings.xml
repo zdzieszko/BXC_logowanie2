@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BXC_logowanie</string>
+
+    <string name="messageWithLink">Nie masz konta? <a href="https://www.google.com/">Zarejestruj się</a></string>
 </resources>
