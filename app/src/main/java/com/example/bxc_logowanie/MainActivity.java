@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText Password;
     private TextView Info;
     private Button Login;
-    private int counter = 10;
+    private int counter = 5;
 
 
 

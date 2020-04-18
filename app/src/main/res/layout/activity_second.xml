@@ -6,11 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".SecondActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tutaj dalsza część"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="312dp" />
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_margin="0dp"
+        android:background="#14191A"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <ImageView
+            android:id="@+id/logoBXC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="100dp"
+            android:layout_marginBottom="100dp"
+            app:srcCompat="@drawable/logo_bxc" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="helvetica"
+            android:gravity="center"
+            android:text="@string/wybierz_profil"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/addNewProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="0dp"
+            app:srcCompat="@drawable/icon_addplayer" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="@string/dodaj_nowy_profil"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btnLogOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="100dp"
+            android:background="#FFFFFF"
+            android:text="@string/log_out"
+            android:textColor="@color/czarny" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

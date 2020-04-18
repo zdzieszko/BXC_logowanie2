@@ -2,4 +2,7 @@
     <string name="app_name">BXC_logowanie</string>
 
     <string name="messageWithLink">Nie masz konta? <a href="https://www.google.com/">Zarejestruj się</a></string>
+    <string name="log_out">LOG OUT</string>
+    <string name="wybierz_profil">Wybierz profil:</string>
+    <string name="dodaj_nowy_profil">Dodaj Nowy Profil</string>
 </resources>
