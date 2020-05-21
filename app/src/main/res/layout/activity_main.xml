@@ -40,7 +40,7 @@
             android:layout_marginBottom="50px"
             android:ems="10"
             android:gravity="center"
-            android:hint="e-mial adress"
+            android:hint="e-mail address"
             android:inputType="textPersonName" />
 
         <EditText

@@ -23,14 +23,14 @@
 
         <EditText
             android:id="@+id/addNewUserLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="100px"
             android:layout_marginRight="100px"
             android:layout_marginBottom="50px"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="center"
-            android:hint="e-mial adress"
+            android:hint="e-mail address"
             android:inputType="textPersonName" />
 
         <EditText
