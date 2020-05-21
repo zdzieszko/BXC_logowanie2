@@ -22,7 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("drop table if exists user");
     }
 
-    public boolean insert (String email, String password){
+    public Boolean insert (String email, String password){
         SQLiteDatabase db = this.getWritableDatabase();
             ContentValues contentValues = new ContentValues();
             contentValues.put("email", email );
@@ -32,11 +32,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             else return true;
     }
 
-    public boolean chkemail (String email){
+    public Boolean chkemail (String email){
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("Select * from user where email=?", new String[]{email});
         if (cursor.getCount() > 0) return false;
         else return true;
     }
+
+    public Boolean loginpassword(String login, String password){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select * from user where email=? and password=?", new  String[]{login, password} );
+        if (cursor.getCount()>0) return true;
+        else return false;
+    }
+
 }

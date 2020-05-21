@@ -6,4 +6,92 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#14191A"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageView
+            android:id="@+id/logoBXC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:layout_margin="100dp"
+            app:srcCompat="@drawable/logo_bxc" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="100dp"
+            android:text="Czas na wspólną grę!"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:layout_marginRight="100px"
+            android:layout_marginBottom="50px"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="e-mial adress"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:layout_marginRight="100px"
+            android:layout_marginBottom="100px"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:hint="password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="450px"
+            android:layout_marginRight="450px"
+            android:layout_marginBottom="100px"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:text="LOGIN"
+            android:textColor="@color/czarny" />
+
+        //android:layout_centerInParent="true"
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100px"
+            android:gravity="center"
+            android:autoLink="web"
+            android:text="@string/messageWithLink"
+
+            />
+
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="No of incorrect attempts:" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

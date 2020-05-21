@@ -23,23 +23,38 @@
 
         <EditText
             android:id="@+id/addNewUserLogin"
+            android:layout_marginLeft="100px"
+            android:layout_marginRight="100px"
+            android:layout_marginBottom="50px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:gravity="center"
+            android:hint="e-mial adress"
             android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/addNewUserPassword"
+            android:layout_marginLeft="100px"
+            android:layout_marginRight="100px"
+            android:layout_marginBottom="50px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:gravity="center"
+            android:hint="password"
             android:inputType="textPassword" />
 
         <EditText
             android:id="@+id/confirmPassword"
+            android:layout_marginLeft="100px"
+            android:layout_marginRight="100px"
+            android:layout_marginBottom="50px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:gravity="center"
+            android:hint="confirm password"
             android:inputType="textPassword" />
 
         <Button
@@ -47,5 +62,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add" />
+
+        <Button
+            android:id="@+id/btLoginNewUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="login" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

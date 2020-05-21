@@ -2,6 +2,7 @@ package com.example.bxc_logowanie;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,10 +11,11 @@ import android.widget.Toast;
 
 public class AddNewUser extends AppCompatActivity {
 
-    private EditText AddNewUserLogin;
-    private EditText AddNewUserPassword;
-    private EditText ConfirmUserPassword;
-    private Button AddNewUserButton;
+    EditText AddNewUserLogin;
+    EditText AddNewUserPassword;
+    EditText ConfirmUserPassword;
+    Button AddNewUserButton, LoginNewUser;
+
 
     DatabaseHelper db;
 
@@ -26,6 +28,7 @@ public class AddNewUser extends AppCompatActivity {
         AddNewUserPassword = (EditText) findViewById(R.id.addNewUserPassword);
         ConfirmUserPassword = (EditText) findViewById(R.id.confirmPassword);
         AddNewUserButton = (Button) findViewById(R.id.btAddNewUserAdd);
+        LoginNewUser = (Button) findViewById(R.id.btLoginNewUser);
         db = new DatabaseHelper(this);
 
 
@@ -51,6 +54,14 @@ public class AddNewUser extends AppCompatActivity {
                     }
                     Toast.makeText(getApplicationContext(), "Password do not match", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        LoginNewUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AddNewUser.this, Login.class);
+                startActivity(i);
             }
         });
     }

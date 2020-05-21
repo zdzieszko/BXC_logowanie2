@@ -12,11 +12,14 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText Name;
-    private EditText Password;
+    DatabaseHelper db;
+    EditText Name;
+    EditText Password;
+    EditText confirmPassword;
+    Button Login;
+    TextView NewUser;
+
     private TextView Info;
-    private Button Login;
-    private TextView NewUser;
     private int counter = 5;
 
 
@@ -27,8 +30,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        db = new DatabaseHelper(this);
         Name = (EditText) findViewById(R.id.etName);
         Password = (EditText) findViewById(R.id.etPassword);
+
+
         Info = (TextView) findViewById(R.id.tvInfo);
         Login = (Button) findViewById(R.id.btnLogin);
         NewUser = (TextView) findViewById(R.id.textView3);
