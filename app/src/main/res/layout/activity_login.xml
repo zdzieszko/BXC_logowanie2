@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="50dp"
             android:text="Czas na wspólną grę!"
             android:textSize="24sp" />
 
@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="100px"
             android:layout_marginRight="100px"
-            android:layout_marginBottom="100px"
+            android:layout_marginBottom="80px"
             android:ems="10"
             android:fontFamily="sans-serif-light"
             android:gravity="center"
@@ -74,7 +74,7 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="100px"
+            android:layout_marginBottom="40px"
             android:gravity="center"
             android:autoLink="web"
             android:text="@string/messageWithLink"

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
 
@@ -17,8 +18,8 @@ public class Login extends AppCompatActivity {
 
 
     TextView Info;
-    private TextView NewUser;
-    private int counter = 5;
+    TextView NewUser;
+    int counter = 5;
 
 
     DatabaseHelper db;
@@ -45,7 +46,20 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 String login = Name.getText().toString();
                 String password = Password.getText().toString();
-                
+                Boolean LoginPassword = db.loginpassword(login, password);
+                if (LoginPassword == true){
+                    Intent intent = new Intent(Login.this, SecondActivity.class);
+                    startActivity(intent);
+                }else {
+                    Toast.makeText(getApplicationContext(),"Wrong login or password", Toast.LENGTH_SHORT).show();
+                    counter--;
+                    Info.setText("No of attempts remaining: " + String.valueOf(counter));
+
+                    if (counter == 0) {
+                        Login.setEnabled(false);
+                        Toast.makeText(getApplicationContext(),"Mozliwosc logowania zablokowana", Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
         });
 
@@ -56,24 +70,5 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-    }
-
-
-    private void validate(String userName, String userPassword) {
-
-        if ((userName.equals("admin")) && (userPassword.equals("1234"))) {
-            Intent intent = new Intent(Login.this, SecondActivity.class);
-            startActivity(intent);
-        } else {
-            counter--;
-
-            Info.setText("No of attempts remaining: " + String.valueOf(counter));
-
-            if (counter == 0) {
-                Login.setEnabled(false);
-            }
-        }
     }
 }

@@ -18,16 +18,16 @@
             android:id="@+id/logoBXC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="100dp"
-            android:layout_margin="100dp"
+            android:layout_margin="80dp"
+            android:layout_marginBottom="80dp"
             app:srcCompat="@drawable/logo_bxc" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
             android:gravity="center"
-            android:layout_marginBottom="100dp"
             android:text="Czas na wspólną grę!"
             android:textSize="24sp" />
 
@@ -74,7 +74,7 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="100px"
+            android:layout_marginBottom="30px"
             android:gravity="center"
             android:autoLink="web"
             android:text="@string/messageWithLink"
