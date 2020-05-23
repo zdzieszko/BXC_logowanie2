@@ -20,13 +20,13 @@ public class HomePage extends AppCompatActivity {
 
         v_flipper = findViewById(R.id.v_flipper);
 
-//        for (int i = 0; i<images.length; i++){
-//            flipperImages(images[i]);
-//        }
-
-        for (int image: images){
-            flipperImages(images[image]);
+        for (int i = 0; i<images.length; i++){
+            flipperImages(images[i]);
         }
+
+//        for (int image: images){
+//            flipperImages(images[image]);
+//        }
     }
 
 
