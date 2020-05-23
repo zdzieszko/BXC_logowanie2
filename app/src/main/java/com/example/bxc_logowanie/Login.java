@@ -16,15 +16,11 @@ public class Login extends AppCompatActivity {
     EditText Password;
     Button Login;
 
-
     TextView Info;
     TextView NewUser;
     int counter = 5;
 
-
     DatabaseHelper db;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
