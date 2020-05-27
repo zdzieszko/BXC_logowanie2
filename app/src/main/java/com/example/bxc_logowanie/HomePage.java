@@ -2,11 +2,17 @@ package com.example.bxc_logowanie;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
 public class HomePage extends AppCompatActivity {
+
+    Button Login;
+    Button Register;
 
     ViewFlipper v_flipper;
 
@@ -16,6 +22,10 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
+        Login = (Button) findViewById(R.id.btHPLogin);
+        Register = (Button) findViewById(R.id.btHPRegister);
+
+
         int images[] = {R.drawable.tokaido_slide, R.drawable.blood_rage_slide};
 
         v_flipper = findViewById(R.id.v_flipper);
@@ -24,9 +34,21 @@ public class HomePage extends AppCompatActivity {
             flipperImages(images[i]);
         }
 
-//        for (int image: images){
-//            flipperImages(images[image]);
-//        }
+        Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, Login.class);
+                startActivity(intent);
+            }
+        });
+
+        Register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, AddNewUser.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

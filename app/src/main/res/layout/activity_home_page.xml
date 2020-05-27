@@ -1,15 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000"
     tools:context="com.example.bxc_logowanie.HomePage">
 
     <ViewFlipper
         android:id="@+id/v_flipper"
+        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_centerHorizontal = "true"
-        android:layout_height="match_parent" />
+        android:layout_height="450dp" >
 
-</RelativeLayout>
+
+    </ViewFlipper>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50px"
+        android:layout_marginRight="50px"
+        android:layout_gravity="right"
+        app:srcCompat="@drawable/menu" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@drawable/rectangle_2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal|top"
+        app:srcCompat="@drawable/logo_bxc"        />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:text="Zarejestruj się. Dzięki temi będziemy mogli spersonalizować Twoje doświadczenia." />
+
+    <Button
+        android:id="@+id/btHPRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="120dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="70dp"
+        android:text="Rejestracja"
+        android:background="#fff"
+        android:textColor="#000"/>
+
+    <Button
+        android:id="@+id/btHPLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="110dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="230sp"
+        android:background="#fff"
+        android:textColor="#000"
+        android:text="Logowanie" />
+
+
+</FrameLayout>
+
