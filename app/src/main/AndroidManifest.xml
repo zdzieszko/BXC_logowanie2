@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login"></activity>
+        <activity android:name=".SliderAdapterExample"></activity>
+        <activity android:name=".SliderAdapterHome" />
+        <activity android:name=".HomePage" />
+        <activity android:name=".Login" />
         <activity android:name=".AddNewUser" />
         <activity android:name=".AddNewProfile" />
         <activity android:name=".SecondActivity" />

@@ -12,6 +12,7 @@ public class SecondActivity extends AppCompatActivity {
 
     private Button LogOut;
     private ImageView AddNewProfile;
+    private ImageView User11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class SecondActivity extends AppCompatActivity {
 
         LogOut = (Button) findViewById(R.id.btnLogOut);
         AddNewProfile = (ImageView) findViewById(R.id.addNewProfile);
+        User11 = (ImageView) findViewById(R.id.user11);
 
         LogOut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +38,15 @@ public class SecondActivity extends AppCompatActivity {
 
                 Intent intent2 = new Intent(SecondActivity.this, AddNewProfile.class);
                 startActivity(intent2);
+            }
+        });
+
+        User11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(SecondActivity.this, HomePage.class);
+                startActivity(intent);
             }
         });
 

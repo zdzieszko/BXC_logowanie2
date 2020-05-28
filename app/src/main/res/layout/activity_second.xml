@@ -31,12 +31,19 @@
             android:gravity="center"
             android:text="@string/wybierz_profil"
             android:textSize="24sp" />
+        <ImageView
+            android:id="@+id/user11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/user11" />
 
         <ImageView
             android:id="@+id/addNewProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="0dp"
             app:srcCompat="@drawable/icon_addplayer" />
 
@@ -54,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:layout_marginRight="100dp"
             android:layout_marginBottom="100dp"
             android:background="#FFFFFF"
